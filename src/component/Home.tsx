@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
@@ -27,7 +28,7 @@ export const Home = () => {
                 Your clothes <Arrow>→</Arrow>
               </PrimaryButton>
 
-              <SecondaryButton>Log in</SecondaryButton>
+              <SecondaryButton to="/login">Log in</SecondaryButton>
             </Actions>
           </HeroContent>
           <HeroImage>
@@ -169,7 +170,7 @@ const Arrow = styled.span`
   font-size: 15px;
 `;
 
-const SecondaryButton = styled.button`
+const SecondaryButton = styled(Link)`
   padding: 11px 22px;
 
   background-color: #ffffff;
@@ -184,6 +185,7 @@ const SecondaryButton = styled.button`
   border-radius: 8px;
 
   cursor: pointer;
+
   &:hover {
     border-color: #94a3b8;
     background-color: #f8fafc;
