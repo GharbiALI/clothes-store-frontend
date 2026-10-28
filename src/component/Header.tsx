@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Header = () => {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <LogoLink>
+        <LogoLink to="/">
           <LogoText>StyleHub</LogoText>
         </LogoLink>
 
         <Navigation>
-          <NavigationLink>Home</NavigationLink>
+          <HomeLink to="/">Home</HomeLink>
 
-          <NavigationLink>Log in</NavigationLink>
+          <LoginLink to="/login">Log in</LoginLink>
         </Navigation>
       </HeaderContent>
     </HeaderContainer>
@@ -37,7 +38,7 @@ const HeaderContent = styled.div`
   justify-content: space-between;
 `;
 
-const LogoLink = styled.div`
+const LogoLink = styled(Link)`
   display: flex;
   align-items: center;
 
@@ -60,7 +61,7 @@ const Navigation = styled.nav`
   gap: 12px;
 `;
 
-const NavigationLink = styled.button`
+const HomeLink = styled(Link)`
   padding: 8px 16px;
 
   color: #2563eb;
@@ -71,11 +72,27 @@ const NavigationLink = styled.button`
 
   text-decoration: none;
 
-  border: #cbd5e1;
   border-radius: 8px;
 
   &:hover {
-    color: #2563eb;
-    background-color: #f8fafc;
+    background-color: #dbeafe;
+  }
+`;
+
+const LoginLink = styled(Link)`
+  padding: 8px 16px;
+
+  color: #ffffff;
+  background-color: #2563eb;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #1d4ed8;
   }
 `;
