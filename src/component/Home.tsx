@@ -24,7 +24,7 @@ export const Home = () => {
             </Description>
 
             <Actions>
-              <PrimaryButton>
+              <PrimaryButton to="/clothes">
                 Your clothes <Arrow>→</Arrow>
               </PrimaryButton>
 
@@ -141,7 +141,7 @@ const Actions = styled.div`
   gap: 12px;
 `;
 
-const PrimaryButton = styled.a`
+const PrimaryButton = styled(Link)`
   display: flex;
   align-items: center;
 

@@ -23,7 +23,7 @@ export const Footer = () => {
         </TopRow>
 
         <Copyright>
-          © {new Date().getFullYear()} BookMarked. All rights reserved.
+          © {new Date().getFullYear()} StyleHub. All rights reserved.
         </Copyright>
       </FooterContent>
     </FooterContainer>
